@@ -6,6 +6,12 @@
 - This is the entry point with funcion `main`.
 - The `main()` is mandatory.
 - No semicolons required.
+- Case sensitive.
+- Strongly typed.
+- Not an object oriented langauge.
+- No exceptions (no try-catch) but some other way to work with errors.
+- We have one file that has `main()` which is the entry point.
+- Packages can have simple names like `services`, `utils`, `data`, `api` or URLs (github.com/foo/bar-baz)
 
 ## Executing a go program
 
