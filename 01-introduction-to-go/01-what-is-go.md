@@ -20,3 +20,11 @@
 ![alt text](images/image1.png)
 
 - We need to keep these goals in mind cause we will surely ask questions on why certain things in go are done in a weird way and the above three goals are the answers to it.
+
+## Use cases
+
+- Web services
+- Web applications
+- DevOps
+- Desktop UI
+- Machine learning
