@@ -12,3 +12,8 @@
 - http package
 - Templating
 - Web servers and services
+
+## To Do's
+
+[] Read more about `init()` functions
+[] Restructure all the notes
