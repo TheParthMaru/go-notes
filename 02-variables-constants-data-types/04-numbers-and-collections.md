@@ -173,4 +173,100 @@ fmt.Println(len(slice)) // 0
 
 ## Maps
 
+- A map is a built-in data type in Go that is associated with key-value pairs.
+- It is like a dictionary in python or an object in JavaScript but with type safety and comparatively much faster.
+- Maps are passed by reference.
+
+```go
+// Syntax
+map[keyType]valueType
+```
+
+### Declaring and initializing a map
+
+```go
+// Using make
+myMap := make(map[string]string)
+fmt.Println(myMap) // map[]
+
+// Using literal
+myMap := map[string]string{
+	"name": "parth",
+	"age":  "27",
+}
+
+fmt.Println(myMap) // map[age:27 name:parth]
+```
+
+- Order is not guaranteed.
+- Maps in Go are randomized in iteration to prevent reliance on order.
+
+### Accessing and modifying the values
+
+```go
+m := make(map[string]int)
+m["apple"] = 3          // Add key-value
+fmt.Println(m["apple"]) // 3
+
+// If a key does not exist, Go returns the zero value for the value type:
+fmt.Println(m["banana"]) // 0, because the default value of the "value" field is int and hence 0.
+```
+
+### Check if a key exists
+
+```go
+user := map[string]string{
+	"name":               "parth",
+	"age":                "27",
+	"relationshipStatus": "Single AF",
+}
+
+value, exists := user["relationshipStatus"]
+
+if exists {
+	fmt.Println("The relationship ship status of", user["name"], "is", value)
+} else {
+	fmt.Println("No key found")
+}
+```
+
+```
+# Output:
+The relationship ship status of parth is Single AF
+```
+
+### Delete key
+
+```go
+delete(user, "relationshipStatus")
+```
+
+### Length of a map
+
+```go
+fmt.Println(len(user))  // 3, number of key-value pairs
+```
+
+### Zero value of a map
+
+```go
+var myMap map[string]int
+myMap["age"] = 25
+
+fmt.Println(myMap) // panic: assignment to entry in nil map
+```
+
+- A declared but not initialized map is nil and cannot be written to.
+- In order to make a map writable, use `make` or literal value for creation.
+
+### Nested maps
+
+```go
+grades := map[string]map[string]int{
+    "Alice": {"Math": 90, "CS": 95},
+    "Bob":   {"Math": 85},
+}
+fmt.Println(grades["Alice"]["CS"])  // 95
+```
+
 ## Generics
