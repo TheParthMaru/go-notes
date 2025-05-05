@@ -17,3 +17,12 @@
 
 [] Read more about `init()` functions
 [] Restructure all the notes
+
+## Topics skipped for now
+
+[] Generics
+[] defer, panic, recover
+[] Closures
+[] Function pointers
+[] Method declaration
+[] Function types and aliases
