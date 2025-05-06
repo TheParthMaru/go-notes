@@ -101,3 +101,47 @@ func main() {
   - We can assign a function to a variable or a data structure.
   - We can pass a function as an argument.
   - We can return a function from another function.
+
+### Assign a function to a variable
+
+```go
+func main() {
+    foo := greet
+    foo()
+}
+
+func greet() {
+    fmt.Println("Hello World")
+}
+```
+
+### Pass a function as an argument
+
+```go
+func calculate(a, b int, operation func(int, int) int) int {
+	return operation(a, b)
+}
+
+func add(x, y int) int {
+	return x + y
+}
+
+func main() {
+	result := calculate(3, 4, add)
+	fmt.Println(result) // 7
+}
+```
+
+### Return a function from a function
+
+```go
+func multiplier(factor int) func(int) int {
+	return func(x int) int {
+		return x * factor
+	}
+}
+
+func main() {
+	fmt.Println(multiplier(2)(8))
+}
+```
