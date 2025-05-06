@@ -20,9 +20,9 @@
 
 ## Topics skipped for now
 
-[] Generics
-[] defer, panic, recover
-[] Closures
-[] Function pointers
-[] Method declaration
-[] Function types and aliases
+[] Generics<br>
+[] defer, panic, recover<br>
+[] Closures<br>
+[] Function pointers<br>
+[] Method declaration<br>
+[] Function types and aliases<br>
