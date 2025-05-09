@@ -15,8 +15,8 @@
 
 ## To Do's
 
-[] Read more about `init()` functions
-[] Restructure all the notes
+[] Read more about `init()` functions<br>
+[] Restructure all the notes<br>
 
 ## Topics skipped for now
 
