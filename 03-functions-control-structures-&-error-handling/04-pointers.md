@@ -35,3 +35,17 @@ fmt.Printf("Value at address %p = %d\n", ptr, *ptr)
 
 - `&` gives you the address.
 - `*` gives you the value at that address.
+
+## What is a dangling pointer?
+
+- A pointer that doesn't point to a valid object of the appropriate type.
+- Usually happens in three scenarios:
+
+  - **De-allocation:** If a pointer is pointing to a memory location of an object, but the object has either been deleted or de-allocated.
+  - **Function call:** If a pointer is pointing to a local variable of a function and the function call gets completed.
+  - **Variable goes out of scope:** If a pointer is pointing to a variable that has gone out of scope.
+
+- The pointer in these scenarios is called as Dangling pointer.
+- Dangling pointers can lead to undefined behavior in a program, including program crashes, data corruption, or memory leaks.
+- To avoid this, we should always set pointers to null after they are freed, and avoid using pointers that point to local variables outside the scope of their function.
+- But the issue of dangling pointers doesn't happen in modern languages like Go, Rust, etc because of garbage collector.
