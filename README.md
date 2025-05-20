@@ -26,3 +26,4 @@
 [] Function pointers<br>
 [] Method declaration<br>
 [] Function types and aliases<br>
+[] More details on pointers and other data structures
